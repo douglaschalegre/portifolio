@@ -34,22 +34,22 @@ export default function Home() {
           <div className='flex flex-col sm:flex-row gap-4'>
             <div className='flex gap-4 flex-col sm:justify-between'>
               <Text className='text-gray-500 max-w-lg'>
-                Hey there! My name is Douglas and I love the web 🥰. I began my
-                journey in IT with a interest in CyberSec, joined a computer
-                science bachelor degree and fell in love with web development!
+                Hey there! My name is Douglas and I love the web. I began my
+                journey in IT with a interest in CyberSec, joined a Computer
+                Science bachelor degree and fell in love with web development!
               </Text>
               <Text className='text-gray-500 max-w-lg'>
-                Couple of years later, after a lot of a lot of improvement on my
-                web development skills 😅. I&apos;ve had the opportunity of
-                working in a{' '}
+                Couple of years later, after of a lot of improvement on my web
+                development skills, I&apos;ve had the opportunity of working in
+                an{' '}
                 <a href='https://t-hand.com.br/' className='text-orange-500'>
-                  acessibility startup
+                  Acessibility startup
                 </a>
                 ,{' '}
                 <a href='https://www.tjal.jus.br/' className='text-orange-500'>
                   public judicial organization
                 </a>
-                ,{' '}
+                and{' '}
                 <a
                   href='https://www.capgemini.com/'
                   className='text-orange-500'
@@ -59,13 +59,13 @@ export default function Home() {
                 </a>
                 . Currently, I&apos;m developing a huge project within the{' '}
                 <a href='https://www.bb.com.br/' className='text-orange-500'>
-                  second largest bank in latin america
+                  second largest bank in Latin America
                 </a>
-                . Focused on bringing inovative technologies and processes in
+                , Focused on bringing inovative technologies and processes in
                 order to maximize agile development and product quality.
               </Text>
               <Text>
-                This are some of the technologies I&apos;ve been using 👨‍💻
+                Those are some of the technologies I&apos;ve been using
               </Text>
               <ul className='text-gray-500 max-w-lg grid grid-cols-2 sm:grid-cols-3'>
                 <li className='list-disc list-inside marker:text-orange-500'>
