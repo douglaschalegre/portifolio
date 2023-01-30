@@ -6,7 +6,10 @@ export default function Home() {
   return (
     <main className='flex items-center justify-center'>
       <div className='flex flex-col sm:max-w-6xl'>
-        <section className='h-screen flex justify-between items-center'>
+        <section
+          className='h-screen flex justify-between items-center'
+          id='home'
+        >
           <div>
             <h1 className='text-sm text-orange-500'>Hi, my name is</h1>
             <h2 className='font-bold text-6xl leading-relaxed'>
@@ -24,7 +27,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id='about'>
+        <section className='h-screen' id='about'>
           <div>
             <Title>About Me</Title>
           </div>
@@ -98,13 +101,16 @@ export default function Home() {
               </ul>
             </div>
             <div className='flex justify-center sm:block'>
-              <Image
-                src='/profile-pic-gray-bg (2).jpg'
-                width='150'
-                height='150'
-                alt={''}
-                className='rounded'
-              />
+              <div>
+                <Image
+                  src='/profile-pic-gray-bg (2).jpg'
+                  width='150'
+                  height='150'
+                  alt={''}
+                  className='rounded'
+                />
+                <div className='w-[150px] h-[150px] -top-32 -right-8 -z-10 relative rounded border border-orange-400' />
+              </div>
             </div>
           </div>
         </section>
