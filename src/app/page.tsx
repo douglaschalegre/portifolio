@@ -61,7 +61,7 @@ export default function Home() {
                 <a href='https://www.bb.com.br/' className='text-orange-500'>
                   second largest bank in Latin America
                 </a>
-                , Focused on bringing inovative technologies and processes in
+                , focused on bringing inovative technologies and processes in
                 order to maximize agile development and product quality.
               </Text>
               <Text>
