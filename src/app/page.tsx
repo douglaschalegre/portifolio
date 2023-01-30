@@ -48,7 +48,7 @@ export default function Home() {
                 ,{' '}
                 <a href='https://www.tjal.jus.br/' className='text-orange-500'>
                   public judicial organization
-                </a>
+                </a>{' '}
                 and{' '}
                 <a
                   href='https://www.capgemini.com/'
