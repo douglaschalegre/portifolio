@@ -16,10 +16,10 @@ export default function Home() {
               I build cool software using modern technologies.
             </h2>
             <p className='text-gray-500 max-w-xl'>
-              I'm a software developer focused on web technologies, bringing a
-              excelent UX, improving efficiency and productivity, reducing
-              costs, and implementing new technologies to support business
-              operations.
+              I&apos;m a software developer focused on web technologies,
+              bringing a excelent UX, improving efficiency and productivity,
+              reducing costs, and implementing new technologies to support
+              business operations.
             </p>
           </div>
         </section>
@@ -37,8 +37,8 @@ export default function Home() {
               </Text>
               <Text className='text-gray-500 max-w-lg'>
                 Couple of years later, after a lot of a lot of improvement on my
-                web development skills 😅. I've had the opportunity of working
-                in a{' '}
+                web development skills 😅. I&apos;ve had the opportunity of
+                working in a{' '}
                 <a href='https://t-hand.com.br/' className='text-orange-500'>
                   acessibility startup
                 </a>
@@ -54,14 +54,16 @@ export default function Home() {
                   a global leader in consulting, technology services and digital
                   transformation
                 </a>
-                . Currently, I'm developing a huge project within the{' '}
+                . Currently, I&apos;m developing a huge project within the{' '}
                 <a href='https://www.bb.com.br/' className='text-orange-500'>
                   second largest bank in latin america
                 </a>
                 . Focused on bringing inovative technologies and processes in
                 order to maximize agile development and product quality.
               </Text>
-              <Text>This are some of the technologies i've been using 👨‍💻</Text>
+              <Text>
+                This are some of the technologies I&apos;ve been using 👨‍💻
+              </Text>
               <ul className='text-gray-500 max-w-lg grid grid-cols-2 sm:grid-cols-3'>
                 <li className='list-disc list-inside marker:text-orange-500'>
                   JavaScript (ES6)
