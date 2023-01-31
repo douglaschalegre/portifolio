@@ -105,7 +105,7 @@ export default function Home() {
                 order to maximize agile development and product quality.
               </Text>
               <Text>
-                Those are some of the technologies I&apos;ve been using
+                These are some of the technologies I&apos;ve been using
               </Text>
               <ul className='text-gray-500 max-w-lg grid grid-cols-2 sm:grid-cols-3'>
                 <li className='list-disc list-inside marker:text-orange-500'>
