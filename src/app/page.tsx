@@ -9,13 +9,13 @@ export default function Home() {
     <main className='flex items-center justify-center'>
       <div className='flex flex-col sm:max-w-6xl'>
         <nav className='mt-1'>
-          <motion.div
-            initial={{ x: -2000 }}
-            animate={{ x: 0 }}
-            className='absolute rounded-sm -z-10  bg-orange-400 w-full h-4'
-          />
-
-          <ul className='w-full flex justify-end items-center gap-4 text-black text-sm'>
+          <ul className='w-full flex justify-end items-center gap-4 text-sm'>
+            <motion.div
+              initial={{ x: -2000, width: 0 }}
+              animate={{ x: 20, y: 10, width: 170, height: 2 }}
+              transition={{ width: { duration: 0.8 } }}
+              className='absolute rounded-sm -z-10 bg-orange-400'
+            />
             <li>
               <a href='#about'>About me</a>
             </li>
