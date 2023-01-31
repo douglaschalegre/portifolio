@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Text } from '@/components/atoms/text';
 import { Title } from '@/components/molecules/title';
 
@@ -8,20 +8,28 @@ export default function Home() {
   return (
     <main className='flex items-center justify-center'>
       <div className='flex flex-col sm:max-w-6xl'>
-        <nav className='mt-1'>
+        <nav className='mt-1 px-4 overflow-hidden'>
           <ul className='w-full flex justify-end items-center gap-4 text-sm'>
             <motion.div
               initial={{ x: -2000, width: 0 }}
-              animate={{ x: 20, y: 10, width: 170, height: 2 }}
+              animate={{ x: 0, y: 20, width: 240, height: 2 }}
               transition={{ width: { duration: 0.8 } }}
               className='absolute rounded-sm -z-10 bg-orange-400'
             />
-            <li>
+            <motion.li
+              initial={{ x: -2000 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 1.1 }}
+            >
               <a href='#about'>About me</a>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+              initial={{ x: -2000 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 1.4 }}
+            >
               <a href='#projects'>Projects</a>
-            </li>
+            </motion.li>
           </ul>
         </nav>
         <section
@@ -32,7 +40,7 @@ export default function Home() {
             <motion.h1
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 1.7 }}
               className='text-sm text-orange-500'
             >
               Hi, my name is
@@ -40,7 +48,7 @@ export default function Home() {
             <motion.h2
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 2 }}
               className='font-bold text-6xl leading-relaxed'
             >
               Douglas Chalegre.
@@ -48,7 +56,7 @@ export default function Home() {
             <motion.h2
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9 }}
+              transition={{ delay: 2.3 }}
               className='font-bold text-3xl leading-relaxed text-gray-300'
             >
               I build cool software using modern technologies.
@@ -56,7 +64,7 @@ export default function Home() {
             <motion.p
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.3 }}
+              transition={{ delay: 2.7 }}
               className='text-gray-500 max-w-xl'
             >
               I&apos;m a software developer focused on web technologies,
