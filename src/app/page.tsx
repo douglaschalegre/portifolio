@@ -1,29 +1,69 @@
+'use client';
+import Image from 'next/image';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Text } from '@/components/atoms/text';
 import { Title } from '@/components/molecules/title';
-import Image from 'next/image';
 
 export default function Home() {
   return (
     <main className='flex items-center justify-center'>
       <div className='flex flex-col sm:max-w-6xl'>
+        <nav className='mt-1'>
+          <motion.div
+            initial={{ x: -2000 }}
+            animate={{ x: 0 }}
+            className='absolute rounded-sm -z-10  bg-orange-400 w-full h-4'
+          />
+
+          <ul className='w-full flex justify-end items-center gap-4 text-black text-sm'>
+            <li>
+              <a href='#about'>About me</a>
+            </li>
+            <li>
+              <a href='#projects'>Projects</a>
+            </li>
+          </ul>
+        </nav>
         <section
           className='h-screen flex justify-between items-center'
           id='home'
         >
           <div>
-            <h1 className='text-sm text-orange-500'>Hi, my name is</h1>
-            <h2 className='font-bold text-6xl leading-relaxed'>
+            <motion.h1
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className='text-sm text-orange-500'
+            >
+              Hi, my name is
+            </motion.h1>
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className='font-bold text-6xl leading-relaxed'
+            >
               Douglas Chalegre.
-            </h2>
-            <h2 className='font-bold text-3xl leading-relaxed text-gray-300'>
+            </motion.h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
+              className='font-bold text-3xl leading-relaxed text-gray-300'
+            >
               I build cool software using modern technologies.
-            </h2>
-            <p className='text-gray-500 max-w-xl'>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.3 }}
+              className='text-gray-500 max-w-xl'
+            >
               I&apos;m a software developer focused on web technologies,
               bringing a excelent UX, improving efficiency and productivity,
               reducing costs, and implementing new technologies to support
               business operations.
-            </p>
+            </motion.p>
           </div>
         </section>
 
