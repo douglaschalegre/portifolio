@@ -1,168 +1,76 @@
-'use client';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { Text } from '@/components/atoms/text';
-import { Title } from '@/components/molecules/title';
+import Cta from '@/components/templates/cta';
+import Feature from '@/components/templates/feature';
+import Price from '@/components/templates/price';
+import Work from '@/components/templates/work';
 
 export default function Home() {
   return (
-    <main className='flex items-center justify-center'>
-      <div className='flex flex-col sm:max-w-6xl'>
-        <nav className='mt-1 px-4 overflow-hidden'>
-          <ul className='w-full flex justify-end items-center gap-4 text-sm'>
-            <motion.div
-              initial={{ x: -2000, width: 0 }}
-              animate={{ x: 0, y: 20, width: 240, height: 2 }}
-              transition={{ width: { duration: 0.8 } }}
-              className='absolute rounded-sm -z-10 bg-orange-400'
-            />
-            <motion.li
-              initial={{ x: -2000 }}
-              animate={{ x: 0 }}
-              transition={{ delay: 1.1 }}
-            >
-              <a href='#about'>About me</a>
-            </motion.li>
-            <motion.li
-              initial={{ x: -2000 }}
-              animate={{ x: 0 }}
-              transition={{ delay: 1.4 }}
-            >
-              <a href='#projects'>Projects</a>
-            </motion.li>
-          </ul>
-        </nav>
-        <section
-          className='h-screen flex justify-between items-center'
-          id='home'
+    <div className='bg-black'>
+      <div className='relative isolate px-6 pt-14 lg:px-8'>
+        <div
+          className='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80'
+          aria-hidden='true'
         >
-          <div>
-            <motion.h1
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.7 }}
-              className='text-sm text-orange-500'
-            >
-              Hi, my name is
-            </motion.h1>
-            <motion.h2
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2 }}
-              className='font-bold text-6xl leading-relaxed'
-            >
-              Douglas Chalegre.
-            </motion.h2>
-            <motion.h2
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2.3 }}
-              className='font-bold text-3xl leading-relaxed text-gray-300'
-            >
-              I build cool software using modern technologies.
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2.7 }}
-              className='text-gray-500 max-w-xl'
-            >
-              I&apos;m a software developer focused on web technologies,
-              bringing a excelent UX, improving efficiency and productivity,
-              reducing costs, and implementing new technologies to support
-              business operations.
-            </motion.p>
-          </div>
-        </section>
-
-        <section className='h-screen' id='about'>
-          <div>
-            <Title>About Me</Title>
-          </div>
-          <div className='flex flex-col sm:flex-row gap-4'>
-            <div className='flex gap-4 flex-col sm:justify-between'>
-              <Text className='text-gray-500 max-w-lg'>
-                Hey there! My name is Douglas and I love the web. I began my
-                journey in IT with a interest in CyberSec, joined a Computer
-                Science bachelor degree and fell in love with web development!
-              </Text>
-              <Text className='text-gray-500 max-w-lg'>
-                Couple of years later, after of a lot of improvement on my web
-                development skills, I&apos;ve had the opportunity of working in
-                an{' '}
-                <a href='https://t-hand.com.br/' className='text-orange-500'>
-                  Acessibility startup
-                </a>
-                ,{' '}
-                <a href='https://www.tjal.jus.br/' className='text-orange-500'>
-                  public judicial organization
-                </a>{' '}
-                and{' '}
-                <a
-                  href='https://www.capgemini.com/'
-                  className='text-orange-500'
-                >
-                  a global leader in consulting, technology services and digital
-                  transformation
-                </a>
-                . Currently, I&apos;m developing a huge project within the{' '}
-                <a href='https://www.bb.com.br/' className='text-orange-500'>
-                  second largest bank in Latin America
-                </a>
-                , focused on bringing inovative technologies and processes in
-                order to maximize agile development and product quality.
-              </Text>
-              <Text>
-                These are some of the technologies I&apos;ve been using
-              </Text>
-              <ul className='text-gray-500 max-w-lg grid grid-cols-2 sm:grid-cols-3'>
-                <li className='list-disc list-inside marker:text-orange-500'>
-                  JavaScript (ES6)
-                </li>
-                <li className='list-disc list-inside marker:text-orange-500'>
-                  TypeScript
-                </li>
-                <li className='list-disc list-inside marker:text-orange-500'>
-                  React
-                </li>
-                <li className='list-disc list-inside marker:text-orange-500'>
-                  NextJS
-                </li>
-                <li className='list-disc list-inside marker:text-orange-500'>
-                  Node.js
-                </li>
-                <li className='list-disc list-inside marker:text-orange-500'>
-                  Express
-                </li>
-                <li className='list-disc list-inside marker:text-orange-500'>
-                  Strapi
-                </li>
-                <li className='list-disc list-inside marker:text-orange-500'>
-                  Python
-                </li>
-                <li className='list-disc list-inside marker:text-orange-500'>
-                  FastApi
-                </li>
-                <li className='list-disc list-inside marker:text-orange-500'>
-                  Angular 2+
-                </li>
-              </ul>
-            </div>
-            <div className='flex justify-center sm:block'>
-              <div>
-                <Image
-                  src='/profile-pic-gray-bg (2).jpg'
-                  width='150'
-                  height='150'
-                  alt={''}
-                  className='rounded'
-                />
-                <div className='w-[150px] h-[150px] -top-32 -right-8 -z-10 relative rounded border border-orange-400' />
-              </div>
+          <div
+            className='relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+          />
+        </div>
+        <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
+          <div className='hidden sm:mb-8 sm:flex sm:justify-center'>
+            <div className='relative rounded-full px-3 py-1 text-sm leading-6 text-gray-300 ring-1 ring-gray-900/10 hover:ring-gray-900/20'>
+              Announcing our next round of funding.{' '}
+              <a href='#' className='font-semibold text-orange-500'>
+                <span className='absolute inset-0' aria-hidden='true' />
+                Read more <span aria-hidden='true'>&rarr;</span>
+              </a>
             </div>
           </div>
-        </section>
+          <div className='text-center'>
+            <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
+              Data to enrich your online business
+            </h1>
+            <p className='mt-6 text-lg leading-8 text-gray-300'>
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+              fugiat aliqua.
+            </p>
+            <div className='mt-10 flex items-center justify-center gap-x-6'>
+              <a
+                href='#'
+                className='rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500'
+              >
+                Get started
+              </a>
+              <a
+                href='#'
+                className='text-sm font-semibold leading-6 text-white'
+              >
+                Learn more <span aria-hidden='true'>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          className='absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]'
+          aria-hidden='true'
+        >
+          <div
+            className='relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#ed8936] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]'
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+          />
+        </div>
       </div>
-    </main>
+      <Feature />
+      <Work />
+      <Cta />
+      <Price />
+    </div>
   );
 }
