@@ -13,11 +13,13 @@ export default function Price() {
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl sm:text-center'>
           <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-            Simple no-tricks pricing
+            Simple, no-tricks.
           </h2>
           <p className='mt-6 text-lg leading-8 text-gray-300'>
-            Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et
-            quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.
+            There are many factors to consider when pricing a product, our
+            values are simplicity, honesty, and fairness. We will build you a
+            simple solution that will help you grow your business and meet your
+            needs.
           </p>
         </div>
         <div className='mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none'>

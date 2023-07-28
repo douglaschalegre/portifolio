@@ -9,19 +9,19 @@ const features = [
   {
     name: 'Push to deploy.',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      "I'll take care of deploying your app. The deployment process involves a series of steps, including preparing the application for release, configuring it to work in the target environment.",
     icon: CloudArrowUpIcon,
   },
   {
     name: 'SSL certificates.',
     description:
-      'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
+      '(Secure Sockets Layer) certificates are vital digital certificates that establish a secure and encrypted connection between users web browsers and web servers. .',
     icon: LockClosedIcon,
   },
   {
-    name: 'Database backups.',
+    name: 'Store secure informations.',
     description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+      'Databases provide a structured way to store data, enabling efficient querying, indexing, and updating of information. They offer data integrity and security mechanisms, ensuring that data remains consistent and protected from unauthorized access.',
     icon: ServerIcon,
   },
 ];
@@ -34,15 +34,16 @@ export default function Feature() {
           <div className='lg:pr-8 lg:pt-4'>
             <div className='lg:max-w-lg'>
               <h2 className='text-base font-semibold leading-7 text-orange-500'>
-                Deploy faster
+                Web Development
               </h2>
               <p className='mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-                A better workflow
+                Beautiful web applications
               </p>
               <p className='mt-6 text-lg leading-8 text-gray-300'>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                Web applications are the future of software. They are
+                accessible, easy to use, and can be used on any device. I can
+                help you build a web application that will make your customers
+                happy.
               </p>
               <dl className='mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-300 lg:max-w-none'>
                 {features.map((feature) => (
