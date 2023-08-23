@@ -1,92 +1,115 @@
 'use client'; // This is a client component 👈🏽
 import Image from 'next/image';
-import { Disclosure } from '@headlessui/react';
+import { useState } from 'react';
+import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Currículo', href: '#' },
+  { name: 'Redes', href: '#' },
+  { name: 'Talks', href: '#' },
 ];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
-
 export default function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <Disclosure as='nav' className='bg-black'>
-      {({ open }) => (
-        <>
-          <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
-            <div className='relative flex h-16 items-center justify-between'>
-              <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
-                {/* Mobile menu button*/}
-                <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
-                  <span className='sr-only'>Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className='block h-6 w-6' aria-hidden='true' />
-                  ) : (
-                    <Bars3Icon className='block h-6 w-6' aria-hidden='true' />
-                  )}
-                </Disclosure.Button>
+    <header className='absolute inset-x-0 top-0 z-50'>
+      <nav
+        className='flex items-center justify-between p-6 lg:px-8'
+        aria-label='Global'
+      >
+        <div className='flex lg:flex-1'>
+          <a href='#' className='-m-1.5 p-1.5'>
+            <span className='sr-only'>Douglas Chalegre</span>
+            <Image
+              className='h-8 w-auto rounded'
+              src='/douglas.dev.png'
+              alt=''
+              width={50}
+              height={50}
+            />
+          </a>
+        </div>
+        <div className='flex lg:hidden'>
+          <button
+            type='button'
+            className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400'
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <span className='sr-only'>Open main menu</span>
+            <Bars3Icon className='h-6 w-6' aria-hidden='true' />
+          </button>
+        </div>
+        <div className='hidden lg:flex lg:gap-x-12'>
+          {navigation.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className='text-sm font-semibold leading-6 text-white'
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
+        <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
+          <a href='#' className='text-sm font-semibold leading-6 text-white'>
+            Fale comigo <span aria-hidden='true'>&rarr;</span>
+          </a>
+        </div>
+      </nav>
+      <Dialog
+        as='div'
+        className='lg:hidden'
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
+        <div className='fixed inset-0 z-50' />
+        <Dialog.Panel className='fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
+          <div className='flex items-center justify-between'>
+            <a href='#' className='-m-1.5 p-1.5'>
+              <span className='sr-only'>Your Company</span>
+              <Image
+                className='h-8 w-auto'
+                src='/douglas.dev-no-bg-big.png'
+                alt=''
+                width={32}
+                height={32}
+              />
+            </a>
+            <button
+              type='button'
+              className='-m-2.5 rounded-md p-2.5 text-gray-400'
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className='sr-only'>Close menu</span>
+              <XMarkIcon className='h-6 w-6' aria-hidden='true' />
+            </button>
+          </div>
+          <div className='mt-6 flow-root'>
+            <div className='-my-6 divide-y divide-gray-500/10'>
+              <div className='space-y-2 py-6'>
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black'
+                  >
+                    {item.name}
+                  </a>
+                ))}
               </div>
-              <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
-                <div className='flex flex-shrink-0 items-center'>
-                  <Image
-                    className='h-8 w-auto rounded'
-                    src='/douglas.dev-no-bg-big.png'
-                    alt='Your Company'
-                    width={30}
-                    height={30}
-                  />
-                </div>
-                <div className='hidden sm:ml-6 sm:block'>
-                  <div className='flex space-x-4'>
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? 'bg-orange-500 text-white'
-                            : 'text-gray-300 hover:bg-black hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
+              <div className='py-6'>
+                <a
+                  href='#'
+                  className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black'
+                >
+                  Fale comigo
+                </a>
               </div>
             </div>
           </div>
-
-          <Disclosure.Panel className='sm:hidden'>
-            <div className='space-y-1 px-2 pb-3 pt-2'>
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as='a'
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? 'bg-zinc-950 text-white'
-                      : 'text-gray-300 hover:bg-black hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+        </Dialog.Panel>
+      </Dialog>
+    </header>
   );
 }

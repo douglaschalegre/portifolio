@@ -1,5 +1,7 @@
+import Companies from '@/components/templates/companies';
 import Cta from '@/components/templates/cta';
 import Feature from '@/components/templates/feature';
+import Logos from '@/components/templates/logos';
 import Price from '@/components/templates/price';
 import Work from '@/components/templates/work';
 
@@ -22,10 +24,10 @@ export default function Home() {
         <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
           <div className='hidden sm:mb-8 sm:flex sm:justify-center'>
             <div className='relative rounded-full px-3 py-1 text-sm leading-6 text-gray-300 ring-1 ring-gray-900/10 hover:ring-gray-900/20'>
-              I build cool software using modern technologies.{' '}
+              Eu construo softwares daora utilizando tecnologias modernas.{' '}
               <a href='#' className='font-semibold text-orange-500'>
                 <span className='absolute inset-0' aria-hidden='true' />
-                Read more <span aria-hidden='true'>&rarr;</span>
+                Saiba mais <span aria-hidden='true'>&rarr;</span>
               </a>
             </div>
           </div>
@@ -34,23 +36,23 @@ export default function Home() {
               Douglas Chalegre
             </h1>
             <p className='mt-6 text-lg leading-8 text-gray-300'>
-              I&apos;m a software developer focused on web technologies,
-              bringing a excelent UX, improving efficiency and productivity,
-              reducing costs, and implementing new technologies to support
-              business operations.
+              Eu sou um engenheiro de software focado em tecnologias web,
+              trazendo uma excelente experiência do usuário, melhorando a
+              eficiência e a produtividade, reduzindo custos e implementando
+              novas tecnologias para auxiliar negócios.
             </p>
             <div className='mt-10 flex items-center justify-center gap-x-6'>
               <a
                 href='#'
                 className='rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500'
               >
-                Contact me
+                Fale comigo
               </a>
               <a
                 href='#'
                 className='text-sm font-semibold leading-6 text-white'
               >
-                Learn more <span aria-hidden='true'>→</span>
+                Saiba mais <span aria-hidden='true'>→</span>
               </a>
             </div>
           </div>
@@ -68,10 +70,8 @@ export default function Home() {
           />
         </div>
       </div>
-      <Feature />
-      {/* <Work /> */}
-      <Cta />
-      {/* <Price /> */}
+      <Logos />
+      {/* <Companies /> */}
     </div>
   );
 }
