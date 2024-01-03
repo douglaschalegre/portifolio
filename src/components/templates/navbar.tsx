@@ -70,7 +70,9 @@ export default function Navbar() {
               {item.name}
             </a>
           ))}
-          <Separator orientation="vertical" />
+          <div>
+            <Separator orientation="vertical" className="bg-orange-500" />
+          </div>
           {apps.map((item) => (
             <a
               key={item.name}
