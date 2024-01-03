@@ -14,11 +14,11 @@ const navigation = [
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [prot, setProt] = useState('https:');
-  const [url, setUrl] = useState('localhost:3000');
+  const [url, setUrl] = useState('douglaschalegre.com');
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setProt(window.location.protocol);
-      setUrl(window.location.host);
+      setUrl(window.location.host.replace('www.', ''));
     }
   }, []);
   const apps = [
