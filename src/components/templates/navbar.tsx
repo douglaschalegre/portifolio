@@ -86,7 +86,7 @@ export default function Navbar() {
             href="/#redes"
             className="text-sm font-semibold leading-6 text-white hover:text-white/90"
           >
-            Fale comigo <span aria-hidden="true">&rarr;</span>
+            Fale comigo
           </a>
         </div>
       </nav>
