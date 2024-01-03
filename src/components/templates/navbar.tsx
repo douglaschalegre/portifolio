@@ -1,16 +1,9 @@
 'use client';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Separator } from '../ui/separator';
-
-let prot = 'https:';
-let url = 'localhost:3000';
-if (typeof window !== 'undefined') {
-  prot = window.location.protocol;
-  url = window.location.host;
-}
 
 const navigation = [
   { name: 'Tecnologias', href: '/#tecnologias' },
@@ -18,22 +11,28 @@ const navigation = [
   { name: 'Talks', href: '/talks' },
 ];
 
-const apps = [
-  {
-    name: 'Arquivos',
-    href: `${prot}//:arquivos.${url}`,
-  },
-  {
-    name: 'Blog',
-    href: `${prot}//:docs.${url}`,
-  },
-];
-
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const [prot, setProt] = useState('https:');
+  const [url, setUrl] = useState('localhost:3000');
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setProt(window.location.protocol);
+      setUrl(window.location.host);
+    }
+  }, []);
+  const apps = [
+    {
+      name: 'Arquivos',
+      href: `${prot}//arquivos.${url}`,
+    },
+    {
+      name: 'Blog',
+      href: `${prot}//docs.${url}`,
+    },
+  ];
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className="sticky inset-x-0 top-0 z-50">
       <nav
         className="flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
