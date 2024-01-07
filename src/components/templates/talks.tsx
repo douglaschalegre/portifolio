@@ -1,10 +1,9 @@
-import LogosGrid from '@/components/templates/logosGrid';
 import { FaArrowCircleDown } from 'react-icons/fa';
 
 export default function Talks() {
   return (
-    <div className="bg-black">
-      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+    <div id="talks" className="bg-black">
+      <div className="mx-auto max-w-2xl">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
@@ -36,10 +35,6 @@ export default function Talks() {
           </div>
         </div>
       </div>
-      <LogosGrid />
-      {/* TODO: 
-      // - [ ] Galeria com talks com imagem, título, descrição e link para download dos slides/arquivos
-      */}
     </div>
   );
 }

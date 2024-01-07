@@ -8,7 +8,7 @@ import { Separator } from '../ui/separator';
 const navigation = [
   { name: 'Tecnologias', href: '/#tecnologias' },
   { name: 'Redes', href: '/#redes' },
-  { name: 'Talks', href: '/talks' },
+  { name: 'Talks', href: '/#talks' },
 ];
 
 export default function Navbar() {
