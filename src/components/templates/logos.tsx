@@ -1,47 +1,82 @@
+'use client';
+import { Card, CardContent } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+
 export default function Logos() {
+  const logos = [
+    {
+      name: 'Typescript',
+      icon: '/ts_logo.png',
+    },
+    {
+      name: 'Python',
+      icon: '/python_logo.png',
+    },
+    {
+      name: 'NodeJS',
+      icon: '/nodejs.svg',
+    },
+    {
+      name: 'React',
+      icon: '/react_logo.png',
+    },
+    {
+      name: 'Tailwind',
+      icon: '/tailwind_logo.svg',
+    },
+  ];
   return (
     <div className="bg-white py-8 sm:py-16" id="tecnologias">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-y-4 px-6 lg:px-8">
         <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
           Principais tecnologias
         </h2>
-        <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-          <img
-            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-            src="/ts_logo.png"
-            alt="Transistor"
-            width={158}
-            height={48}
-          />
-          <img
-            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-            src="/python_logo.png"
-            alt="Reform"
-            width={158}
-            height={48}
-          />
-          <img
-            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-            src="/nodejs.svg"
-            alt="Tuple"
-            width={158}
-            height={48}
-          />
-          <img
-            className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-            src="/react_logo.png"
-            alt="SavvyCal"
-            width={158}
-            height={48}
-          />
-          <img
-            className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-            src="/tailwind_logo.svg"
-            alt="Statamic"
-            width={158}
-            height={48}
-          />
-        </div>
+
+        <Carousel
+          opts={{
+            align: 'start',
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 2000,
+              stopOnInteraction: false,
+            }),
+          ]}
+          className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-4xl"
+        >
+          <CarouselContent>
+            {Array.from({ length: 5 }).map((_, index) => (
+              <CarouselItem
+                key={logos[index].name}
+                className="basis-1/2 md:basis-1/3 lg:basis-1/4"
+              >
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                      <span className="text-3xl font-semibold">
+                        <img
+                          className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                          src={logos[index].icon}
+                          alt={logos[index].name}
+                          width={50}
+                          height={50}
+                        />
+                      </span>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
     </div>
   );
