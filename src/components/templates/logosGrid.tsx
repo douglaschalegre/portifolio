@@ -1,5 +1,5 @@
 'use client';
-import { FaGithub, FaInstagram, FaLinkedin, FaMedium } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { Button } from '../ui/button';
 import { motion } from 'framer-motion';
@@ -75,7 +75,6 @@ export default function LogosGrid() {
                         {button.icon}
                         <motion.p
                           variants={animateText}
-                          initial="initial"
                           className="relative right-96 hidden w-0 group-hover:ml-1 group-hover:flex group-hover:w-auto"
                         >
                           {button.username}
