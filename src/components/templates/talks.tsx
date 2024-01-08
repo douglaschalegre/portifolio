@@ -1,4 +1,13 @@
+'use client';
+import Image from 'next/image';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 import { FaArrowCircleDown } from 'react-icons/fa';
+import { Card, CardContent } from '../ui/card';
 
 export default function Talks() {
   const talks = [
@@ -15,7 +24,7 @@ export default function Talks() {
         'Workshop de desenvolvimento fullstack de uma aplicação clone do Twitter realizado na FAN/FGV em Maceió.',
       date: '30/03/2022',
       url: 'https://github.com/douglaschalegre/Twitter-Clone',
-      photo: '/talks/workshop-twitter-clone.jpg',
+      photo: '/talks/twitter-clone.jpg',
     },
     {
       name: 'Workshop Hands-on IA classificadora de cores',
@@ -28,7 +37,7 @@ export default function Talks() {
   ];
   return (
     <div id="talks" className="px-6 pt-14 lg:px-8">
-      <div className="mx-auto max-w-2xl py-8 sm:py-48 lg:py-56">
+      <div className="mx-auto max-w-2xl py-8 sm:py-10 lg:py-12">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
@@ -58,6 +67,52 @@ export default function Talks() {
               </div>
             </a>
           </div>
+        </div>
+        <div className="flex items-center justify-center py-8">
+          <Carousel
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 2000,
+                stopOnInteraction: false,
+              }),
+            ]}
+            className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-4xl"
+          >
+            <CarouselContent>
+              {Array.from({ length: talks.length }).map((_, index) => (
+                <CarouselItem
+                  key={talks[index].name}
+                  className="basis-1/2 md:basis-1/3"
+                >
+                  <div className="p-1">
+                    <Card>
+                      <CardContent className="m-0 flex aspect-square items-center justify-center p-0">
+                        <Image
+                          className="max-h-36 w-full object-cover"
+                          src={talks[index].photo}
+                          alt={talks[index].name}
+                          width={300}
+                          height={300}
+                        />
+                      </CardContent>
+                    </Card>
+                    <div className="flex justify-center pt-2">
+                      <span className="text-center text-sm text-white/50">
+                        {talks[index].name}
+                      </span>
+                      <span className="text-center text-sm text-white/50">
+                        {talks[index].date}
+                      </span>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </div>
