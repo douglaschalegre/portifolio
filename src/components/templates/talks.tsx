@@ -76,7 +76,7 @@ export default function Talks() {
             }}
             plugins={[
               Autoplay({
-                delay: 2000,
+                delay: 5000,
                 stopOnInteraction: false,
               }),
             ]}
@@ -91,20 +91,25 @@ export default function Talks() {
                   <div className="p-1">
                     <Card>
                       <CardContent className="m-0 flex aspect-square items-center justify-center p-0">
-                        <Image
-                          className="max-h-36 w-full object-cover"
-                          src={talks[index].photo}
-                          alt={talks[index].name}
-                          width={300}
-                          height={300}
-                        />
+                        <a href={talks[index].url}>
+                          <Image
+                            className="max-h-36 w-full object-cover"
+                            src={talks[index].photo}
+                            alt={talks[index].name}
+                            width={300}
+                            height={300}
+                          />
+                        </a>
                       </CardContent>
                     </Card>
-                    <div className="flex justify-center pt-2">
-                      <span className="text-center text-sm text-white/50">
+                    <div className="flex flex-col justify-center gap-y-1 pt-2">
+                      <span className="text- text-center text-sm font-semibold text-white/50">
                         {talks[index].name}
                       </span>
                       <span className="text-center text-sm text-white/50">
+                        {talks[index].description}
+                      </span>
+                      <span className="text-center text-sm text-orange-500">
                         {talks[index].date}
                       </span>
                     </div>
