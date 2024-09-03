@@ -1,5 +1,5 @@
 import Hero from '@/components/templates/hero';
-import Logos from '@/components/templates/logos';
+import Stack from '@/components/templates/stack';
 import LogosGrid from '@/components/templates/logosGrid';
 import Talks from '@/components/templates/talks';
 
@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="bg-black">
       <Hero />
-      <Logos />
+      <Stack />
       <Talks />
       <LogosGrid />
       {/* TODO:

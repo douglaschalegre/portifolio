@@ -7,7 +7,7 @@ import {
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 
-export default function Logos() {
+export default function Stack() {
   const logos = [
     {
       name: 'Typescript',
@@ -16,6 +16,10 @@ export default function Logos() {
     {
       name: 'Python',
       icon: '/python_logo.png',
+    },
+    {
+      name: 'FastAPI',
+      icon: '/fastapi_logo.png',
     },
     {
       name: 'NodeJS',
