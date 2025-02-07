@@ -23,8 +23,8 @@ export default function Navbar() {
   }, []);
   const apps = [
     {
-      name: 'Arquivos',
-      href: `${prot}//arquivos.${url}`,
+      name: 'Keywords Insights',
+      href: `${prot}//keywords.${url}`,
     },
     {
       name: 'Blog',
