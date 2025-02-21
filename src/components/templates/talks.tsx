@@ -7,7 +7,7 @@ import {
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import { FaArrowCircleDown } from 'react-icons/fa';
-import { Card, CardContent } from '../ui/card';
+import { CardContent } from '../ui/card';
 
 export default function Talks() {
   const talks = [
@@ -19,7 +19,7 @@ export default function Talks() {
       photo: '/talks/workshop-web.jpg',
     },
     {
-      name: 'Workshop Hands-on Twitter Clone',
+      name: 'Hands-on Twitter Clone',
       description:
         'Workshop de desenvolvimento fullstack de uma aplicação clone do Twitter realizado na FAN/FGV em Maceió.',
       date: '30/03/2022',
@@ -27,7 +27,7 @@ export default function Talks() {
       photo: '/talks/twitter-clone.jpg',
     },
     {
-      name: 'Workshop Hands-on IA classificadora de cores',
+      name: 'Hands-on IA classificadora de cores',
       description:
         'Workshop de desenvolvimento de uma aplicação que classifica cores utilizando inteligência artificial e front-end para interação. Realizado na semana de extensão da UNIT-AL.',
       date: '21/11/2022',
@@ -58,7 +58,7 @@ export default function Talks() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href="#"
+              href="#talks_photos"
               className="flex items-center gap-1 rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
             >
               <p>Ver palestras</p>
@@ -68,7 +68,10 @@ export default function Talks() {
             </a>
           </div>
         </div>
-        <div className="flex items-center justify-center py-8">
+        <div
+          className="flex items-center justify-center py-8"
+          id="talks_photos"
+        >
           <Carousel
             opts={{
               align: 'start',
@@ -84,32 +87,28 @@ export default function Talks() {
           >
             <CarouselContent>
               {Array.from({ length: talks.length }).map((_, index) => (
-                <CarouselItem
-                  key={talks[index].name}
-                  className="basis-1/2 md:basis-1/3"
-                >
+                <CarouselItem key={talks[index].name} className="md:basis-1/3">
                   <div className="p-1">
-                    <Card>
-                      <CardContent className="m-0 flex aspect-square items-center justify-center p-0">
-                        <a href={talks[index].url}>
-                          <Image
-                            className="max-h-36 w-full object-cover"
-                            src={talks[index].photo}
-                            alt={talks[index].name}
-                            width={300}
-                            height={300}
-                          />
-                        </a>
-                      </CardContent>
-                    </Card>
+                    <CardContent className="m-0 flex aspect-[16/9] items-center justify-center overflow-hidden p-0">
+                      <a href={talks[index].url} className="h-full w-full">
+                        <Image
+                          className="h-full w-full rounded object-cover"
+                          src={talks[index].photo}
+                          alt={talks[index].name}
+                          width={300}
+                          height={169}
+                          quality={100}
+                        />
+                      </a>
+                    </CardContent>
                     <div className="flex flex-col justify-center gap-y-1 pt-2">
-                      <span className="text- text-center text-sm font-semibold text-white/50">
+                      <span className="text- text-center text-sm font-semibold text-orange-500">
                         {talks[index].name}
                       </span>
                       <span className="text-center text-sm text-white/50">
                         {talks[index].description}
                       </span>
-                      <span className="text-center text-sm text-orange-500">
+                      <span className="text-center text-sm text-white/50">
                         {talks[index].date}
                       </span>
                     </div>

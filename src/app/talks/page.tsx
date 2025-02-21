@@ -3,7 +3,7 @@ import { FaArrowCircleDown } from 'react-icons/fa';
 
 export default function Talks() {
   return (
-    <div className="bg-black">
+    <div className="bg-neutral-900">
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
         <div className="text-center">
