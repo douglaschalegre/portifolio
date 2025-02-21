@@ -2,7 +2,7 @@
 
 export default function About() {
   return (
-    <div id="sobre" className="px-6 pt-14 lg:px-8">
+    <div id="sobre" className="px-6 pb-14 lg:px-8 lg:pb-32">
       <div className="mx-auto max-w-2xl py-8 sm:py-10 lg:py-12">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
         <div className="text-center">
