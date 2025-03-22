@@ -9,6 +9,7 @@ const navigation = [
   { name: 'Tecnologias', href: '/#tecnologias' },
   { name: 'Redes', href: '/#redes' },
   { name: 'Talks', href: '/#talks' },
+  { name: 'Contato', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -84,8 +85,8 @@ export default function Navbar() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="/#redes"
-            className="text-sm font-semibold leading-6 text-white hover:text-white/90"
+            href="/contact"
+            className="rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
           >
             Fale comigo
           </a>
@@ -151,7 +152,7 @@ export default function Navbar() {
               </div>
               <div className="py-6">
                 <a
-                  href="https://www.instagram.com/dev.douglas"
+                  href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black"
                 >
                   Fale comigo

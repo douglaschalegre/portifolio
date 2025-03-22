@@ -1,0 +1,22 @@
+{
+  "name": "Douglas Chalegre | Engenheiro de Software",
+  "short_name": "Douglas Chalegre",
+  "description": "Engenheiro de software focado em tecnologias web, trazendo uma excelente experiência do usuário.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#171717",
+  "theme_color": "#171717",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 

@@ -1,4 +1,3 @@
-import LogosGrid from '@/components/templates/logosGrid';
 import { FaArrowCircleDown } from 'react-icons/fa';
 
 export default function Talks() {
@@ -36,10 +35,6 @@ export default function Talks() {
           </div>
         </div>
       </div>
-      <LogosGrid />
-      {/* TODO: 
-      // - [ ] Galeria com talks com imagem, título, descrição e link para download dos slides/arquivos
-      */}
     </div>
   );
 }

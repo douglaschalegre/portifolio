@@ -32,8 +32,8 @@ export default function LogosGrid() {
   ];
 
   return (
-    <div className="bg-neutral-900 py-24 sm:py-32" id="redes">
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+    <div className="bg-neutral-900 py-12 sm:py-16" id="redes">
+      <div className="relative isolate px-6 lg:px-8">
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           <div className="flex flex-col items-center justify-center gap-y-4 text-lg font-semibold leading-8">
             <h2>Redes sociais</h2>
