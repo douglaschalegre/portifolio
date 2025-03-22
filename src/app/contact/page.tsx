@@ -8,20 +8,22 @@ const ContactPage: FC = () => {
   return (
     <div className="min-h-screen bg-neutral-900">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-        <Link
-          href="/"
-          className="mb-8 inline-flex items-center text-sm font-semibold text-white hover:text-white/90"
-        >
-          <ArrowLeftIcon className="mr-2 h-4 w-4" />
-          Voltar para a página inicial
-        </Link>
+        <header className="mb-16">
+          <Link
+            href="/"
+            className="inline-flex items-center text-sm font-semibold text-white hover:text-white/90"
+          >
+            <ArrowLeftIcon className="mr-2 h-4 w-4" />
+            Voltar para a página inicial
+          </Link>
+        </header>
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Vamos criar algo incrível juntos?
+            Vamos conversar sobre seu projeto?
           </h1>
           <p className="mt-2 text-lg leading-8 text-gray-300">
-            Me conte sobre seu projeto e vamos transformar suas ideias em
-            realidade.
+            Preencha o formulário abaixo e me conte mais sobre suas ideias. Vou
+            responder o mais rápido possível.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-4xl">

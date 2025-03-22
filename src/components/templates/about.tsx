@@ -13,12 +13,12 @@ export default function About() {
             Acredito que o desenvolvedor precisa ter além da visão técnica. O
             objetivo do código é solucionar problemas e no fim esse é o objetivo
             que devemos atingir.
-            <p className="mt-6 leading-8 text-gray-300">
-              Sou graduado em ciência da computação e atualmente em busca de
-              ingressar em um mestrado para pesquisar sobre IA aplicada a
-              Engenharia de Software.
-            </p>
           </p>
+          <div className="mt-6 leading-8 text-gray-300">
+            Sou graduado em ciência da computação e atualmente em busca de
+            ingressar em um mestrado para pesquisar sobre IA aplicada a
+            Engenharia de Software.
+          </div>
         </div>
       </div>
     </div>
