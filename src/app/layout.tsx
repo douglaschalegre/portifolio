@@ -9,6 +9,7 @@ import BackToTop from '@/components/back-to-top';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://douglaschalegre.com'),
   title: 'Douglas Chalegre | Engenheiro de Software',
   description:
     'Engenheiro de software focado em tecnologias web, trazendo uma excelente experiência do usuário, melhorando a eficiência e a produtividade.',
