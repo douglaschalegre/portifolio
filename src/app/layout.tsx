@@ -96,6 +96,17 @@ export default function RootLayout({
               email: 'douglas.chalegre@gmail.com',
               description:
                 'Engenheiro de software focado em tecnologias web, trazendo uma excelente experiência do usuário.',
+              worksFor: {
+                '@type': 'Organization',
+                name: 'Freelancer',
+              },
+              skills: [
+                'React',
+                'TypeScript',
+                'Next.js',
+                'Web Development',
+                'Software Engineering',
+              ],
             }),
           }}
         />
