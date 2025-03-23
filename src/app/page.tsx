@@ -3,6 +3,7 @@ import Stack from '@/components/templates/stack';
 import Talks from '@/components/templates/talks';
 import About from '@/components/templates/about';
 import Contact from '@/components/templates/contact';
+import Blog from '@/components/templates/blog';
 import { ErrorBoundary } from '@/components/error-boundary';
 
 export default function Home() {
@@ -19,6 +20,9 @@ export default function Home() {
       </ErrorBoundary>
       <ErrorBoundary>
         <Talks />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Blog />
       </ErrorBoundary>
       <ErrorBoundary>
         <Contact />
