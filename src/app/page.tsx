@@ -7,7 +7,7 @@ import { profile, socialLinks } from '@/lib/site/content';
 export const metadata: Metadata = {
   title: 'Douglas Chalegre | About & Blog',
   description:
-    'Engenheiro de software focado em produtos web, arquitetura e desenvolvimento de software. Veja meus artigos e formas de contato.',
+    'Engenheiro de software e pesquisador com foco em sistemas distribuídos, microserviços e arquitetura orientada a eventos. Artigos sobre software, arquitetura e IA.',
   alternates: {
     canonical: '/',
   },
