@@ -21,7 +21,7 @@ export default function Navbar() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 flex items-center gap-3 p-1.5">
             <span className="sr-only">Douglas Chalegre</span>
             <Image
               className="h-8 w-auto rounded"
@@ -30,6 +30,9 @@ export default function Navbar() {
               width={50}
               height={50}
             />
+            <span className="hidden text-sm font-semibold tracking-tight text-white sm:inline">
+              Douglas Chalegre
+            </span>
           </Link>
         </div>
 
@@ -68,7 +71,7 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50 bg-black/30" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-neutral-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 flex items-center gap-3 p-1.5">
               <span className="sr-only">Douglas Chalegre</span>
               <Image
                 className="h-8 w-auto rounded"
@@ -77,6 +80,9 @@ export default function Navbar() {
                 width={32}
                 height={32}
               />
+              <span className="text-sm font-semibold tracking-tight text-white">
+                Douglas Chalegre
+              </span>
             </Link>
             <button
               type="button"
