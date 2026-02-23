@@ -54,6 +54,93 @@
   }
 }
 
+@layer components {
+  .blog-prose {
+    color: rgb(228 228 231);
+  }
+
+  .blog-prose h1,
+  .blog-prose h2,
+  .blog-prose h3,
+  .blog-prose h4,
+  .blog-prose h5,
+  .blog-prose h6 {
+    @apply text-white;
+    letter-spacing: -0.02em;
+  }
+
+  .blog-prose h2 {
+    @apply mt-12 border-t border-white/10 pt-8;
+  }
+
+  .blog-prose a {
+    @apply font-medium text-orange-300 no-underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .blog-prose a:hover {
+    @apply text-orange-200 underline;
+  }
+
+  .blog-prose strong {
+    @apply text-white;
+  }
+
+  .blog-prose code {
+    @apply rounded bg-white/10 px-1.5 py-0.5 text-orange-200;
+  }
+
+  .blog-prose pre {
+    @apply border border-white/10 bg-black/60 text-zinc-100 shadow-2xl shadow-black/20;
+  }
+
+  .blog-prose pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  .blog-prose pre .hljs {
+    background: transparent;
+  }
+
+  .blog-prose blockquote {
+    @apply border-l-orange-400 bg-white/[0.02] py-1 text-zinc-200;
+  }
+
+  .blog-prose hr {
+    @apply border-white/10;
+  }
+
+  .blog-prose img {
+    @apply rounded-xl border border-white/10;
+  }
+
+  .blog-prose table {
+    @apply block w-full overflow-x-auto rounded-xl border border-white/10;
+  }
+
+  .blog-prose thead {
+    @apply bg-white/[0.03];
+  }
+
+  .blog-prose th {
+    @apply border-b border-white/10 text-left text-zinc-100;
+  }
+
+  .blog-prose td {
+    @apply border-b border-white/10 text-zinc-200;
+  }
+
+  .blog-prose tbody tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .blog-prose ul > li::marker,
+  .blog-prose ol > li::marker {
+    color: rgb(251 146 60);
+  }
+}
+
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;

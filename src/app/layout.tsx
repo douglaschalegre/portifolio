@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import 'highlight.js/styles/github-dark.css';
 import Navbar from '@/components/templates/navbar';
 import { Analytics } from '@vercel/analytics/react';
 import SkipLink from '@/components/skip-link';
-import LogosGrid from '@/components/templates/logosGrid';
 import BackToTop from '@/components/back-to-top';
 const inter = Inter({ subsets: ['latin'] });
 
@@ -116,7 +116,6 @@ export default function RootLayout({
         <Navbar />
         <main id="main-content">{children}</main>
         <Analytics />
-        <LogosGrid />
         <BackToTop />
       </body>
     </html>
