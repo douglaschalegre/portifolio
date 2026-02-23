@@ -4,11 +4,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import {
+  Bars3Icon,
+  MagnifyingGlassIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'About', href: '/about' },
   { name: 'Blog', href: '/blog' },
+  { name: 'About', href: '/about' },
 ];
 
 export default function Navbar() {
@@ -59,7 +63,26 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end" />
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <form action="/search" method="get" className="w-full max-w-xs">
+            <label htmlFor="navbar-search" className="sr-only">
+              Buscar artigos
+            </label>
+            <div className="relative">
+              <MagnifyingGlassIcon
+                aria-hidden="true"
+                className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500"
+              />
+              <input
+                id="navbar-search"
+                name="q"
+                type="search"
+                placeholder="Buscar no blog..."
+                className="h-10 w-full rounded-xl border border-white/10 bg-white/5 pl-9 pr-3 text-sm text-white placeholder:text-zinc-500 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500"
+              />
+            </div>
+          </form>
+        </div>
       </nav>
 
       <Dialog
@@ -95,6 +118,36 @@ export default function Navbar() {
           </div>
 
           <div className="mt-8">
+            <form
+              action="/search"
+              method="get"
+              onSubmit={() => setMobileMenuOpen(false)}
+              className="mb-5"
+            >
+              <label htmlFor="navbar-search-mobile" className="sr-only">
+                Buscar artigos
+              </label>
+              <div className="relative">
+                <MagnifyingGlassIcon
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500"
+                />
+                <input
+                  id="navbar-search-mobile"
+                  name="q"
+                  type="search"
+                  placeholder="Buscar no blog..."
+                  className="h-11 w-full rounded-xl border border-white/10 bg-white/5 pl-9 pr-20 text-sm text-white placeholder:text-zinc-500 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500"
+                />
+                <button
+                  type="submit"
+                  className="absolute right-1.5 top-1/2 inline-flex h-8 -translate-y-1/2 items-center justify-center rounded-lg border border-orange-500/30 bg-orange-500/10 px-3 text-xs font-semibold text-orange-500 transition hover:border-orange-500/60 hover:bg-orange-500/15"
+                >
+                  Buscar
+                </button>
+              </div>
+            </form>
+
             <nav aria-label="Mobile">
               <ul className="space-y-2" role="list">
                 {navigation.map((item) => (
