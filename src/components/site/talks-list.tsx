@@ -5,7 +5,16 @@ interface TalksListProps {
   repoUrl?: string;
 }
 
+function parseBrDate(date: string): number {
+  const [day, month, year] = date.split('/').map(Number);
+  return new Date(year, (month ?? 1) - 1, day ?? 1).getTime();
+}
+
 export default function TalksList({ talks, repoUrl }: TalksListProps) {
+  const orderedTalks = [...talks].sort(
+    (a, b) => parseBrDate(b.date) - parseBrDate(a.date),
+  );
+
   return (
     <section className="pt-8 pb-12 sm:pt-10 sm:pb-16" aria-labelledby="talks-title">
       <div className="site-container">
@@ -36,7 +45,7 @@ export default function TalksList({ talks, repoUrl }: TalksListProps) {
         </div>
 
         <ul className="mt-8 space-y-6" role="list">
-          {talks.map((talk) => (
+          {orderedTalks.map((talk) => (
             <li key={`${talk.title}-${talk.date}`}>
               <article className="group">
                 <div className="flex flex-wrap items-center gap-2 text-xs text-zinc-400">

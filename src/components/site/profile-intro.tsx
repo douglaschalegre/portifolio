@@ -7,6 +7,7 @@ interface ProfileIntroProps {
   socialLinks: SocialLink[];
   description?: string;
   eyebrow?: string;
+  showDescription?: boolean;
 }
 
 export default function ProfileIntro({
@@ -14,6 +15,7 @@ export default function ProfileIntro({
   socialLinks,
   description,
   eyebrow,
+  showDescription = true,
 }: ProfileIntroProps) {
   return (
     <section className="pt-16 pb-8 sm:pt-20 sm:pb-10">
@@ -45,11 +47,13 @@ export default function ProfileIntro({
             <p className="mt-2 text-sm font-medium text-orange-500">
               {profile.role}
             </p>
-            <p className="mt-4 max-w-3xl text-base leading-7 text-zinc-300 sm:text-lg">
-              {description ?? profile.shortBio}
-            </p>
+            {showDescription ? (
+              <p className="mt-4 max-w-3xl text-base leading-7 text-zinc-300 sm:text-lg">
+                {description ?? profile.shortBio}
+              </p>
+            ) : null}
 
-            <div className="mt-6">
+            <div className={showDescription ? 'mt-6' : 'mt-4'}>
               <SocialLinks links={socialLinks} />
             </div>
           </div>
