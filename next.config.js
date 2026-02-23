@@ -18,6 +18,11 @@ const nextConfig = {
         hostname: 'tailwindui.com',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.gravatar.com',
+        pathname: '**',
+      },
     ],
   },
 };
