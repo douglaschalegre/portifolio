@@ -17,6 +17,7 @@ export interface TalkItem {
   description: string;
   date: string;
   href: string;
+  type?: 'Talk' | 'Workshop' | 'Talk / Workshop';
 }
 
 export const githubUsername = 'douglaschalegre';
@@ -73,6 +74,7 @@ export const talks: TalkItem[] = [
     description: 'Workshop de desenvolvimento web realizado na UNIT-AL.',
     date: '15/08/2019',
     href: 'https://github.com/douglaschalegre/Talks/tree/master/Workshop%20desenvolvimento%20web',
+    type: 'Workshop',
   },
   {
     title: 'Hands-on Twitter Clone',
@@ -80,6 +82,7 @@ export const talks: TalkItem[] = [
       'Workshop full stack com uma aplicação inspirada no Twitter, realizado na FAN/FGV em Maceió.',
     date: '30/03/2022',
     href: 'https://github.com/douglaschalegre/Twitter-Clone',
+    type: 'Workshop',
   },
   {
     title: 'Hands-on IA Classificadora de Cores',
@@ -87,12 +90,14 @@ export const talks: TalkItem[] = [
       'Workshop de aplicação com IA para classificação de cores e interface front-end na semana de extensão da UNIT-AL.',
     date: '21/11/2022',
     href: 'https://github.com/douglaschalegre/colors-collector',
+    type: 'Workshop',
   },
   {
     title: 'Insights sobre agentes',
     description:
       'Apresentação sobre agentes inteligentes, suas características, aplicações e desafios.',
     date: '12/02/2026',
-    href: 'https://github.com/douglaschalegre/Talks/blob/master/Insights%20sobre%20agentes.pdf'
+    href: 'https://github.com/douglaschalegre/Talks/blob/master/Insights%20sobre%20agentes.pdf',
+    type: 'Talk',
   }
 ];

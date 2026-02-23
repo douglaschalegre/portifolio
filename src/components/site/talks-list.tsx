@@ -46,7 +46,7 @@ export default function TalksList({ talks, repoUrl }: TalksListProps) {
                   <span aria-hidden="true" className="text-orange-500">
                     •
                   </span>
-                  <span>Talk / Workshop</span>
+                  <span>{talk.type}</span>
                 </div>
 
                 <h3 className="mt-2 text-lg font-semibold tracking-tight text-white sm:text-xl">
