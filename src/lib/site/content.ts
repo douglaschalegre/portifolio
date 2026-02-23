@@ -88,4 +88,11 @@ export const talks: TalkItem[] = [
     date: '21/11/2022',
     href: 'https://github.com/douglaschalegre/colors-collector',
   },
+  {
+    title: 'Insights sobre agentes',
+    description:
+      'Apresentação sobre agentes inteligentes, suas características, aplicações e desafios.',
+    date: '12/02/2026',
+    href: 'https://github.com/douglaschalegre/Talks/blob/master/Insights%20sobre%20agentes.pdf'
+  }
 ];
