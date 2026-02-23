@@ -121,6 +121,27 @@ function toHref(year: string, slug: string): string {
   return `/blog/${year}/${slug}`;
 }
 
+function normalizeForSearch(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+}
+
+function matchesQuery(post: BlogPost, query: string): boolean {
+  const normalizedQuery = normalizeForSearch(query).trim();
+  if (!normalizedQuery) return false;
+
+  const terms = normalizedQuery.split(/\s+/).filter(Boolean);
+  if (terms.length === 0) return false;
+
+  const searchable = normalizeForSearch(
+    [post.title, post.description, post.content].join('\n'),
+  );
+
+  return terms.every((term) => searchable.includes(term));
+}
+
 function normalizeFrontmatter(
   rawData: unknown,
   sourcePath: string,
@@ -257,4 +278,14 @@ export async function getBlogPost(
 export async function getAllBlogParams(): Promise<BlogPostParams[]> {
   const posts = await getAllBlogPostMeta();
   return posts.map(({ year, slug }) => ({ year, slug }));
+}
+
+export async function searchBlogPosts(query: string): Promise<BlogPostMeta[]> {
+  const normalizedQuery = query.trim();
+  if (!normalizedQuery) {
+    return [];
+  }
+
+  const posts = await loadAllBlogPosts();
+  return posts.filter((post) => matchesQuery(post, normalizedQuery)).map(toMeta);
 }

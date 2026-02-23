@@ -19,16 +19,20 @@ export interface TalkItem {
   href: string;
 }
 
+export const githubUsername = 'douglaschalegre';
+export const githubProfileUrl = `https://github.com/${githubUsername}`;
+
 export const profile: ProfileContent = {
   name: 'Douglas Chalegre',
-  role: 'Engenheiro de Software',
-  avatarSrc: '/profile-pic-gray-bg%20(2).jpg',
+  role: 'Engenheiro de Software e Pesquisador',
+  avatarSrc:
+    'https://www.gravatar.com/avatar/53dd21d3a0baf4ca00987869c8b23701?s=240&d=mp',
   shortBio:
-    'Engenheiro de software focado em produtos web. Trabalho conectando experiência do usuário, arquitetura e execução para transformar problemas reais em software simples de operar e manter.',
+    'Engenheiro de software e pesquisador com foco em sistemas distribuídos. Trabalho com microserviços, arquitetura orientada a eventos e mensageria assíncrona para construir software confiável, escalável e interoperável.',
   aboutParagraphs: [
-    'Sou graduado em Ciência da Computação e atuo principalmente com desenvolvimento web, com uma trajetória que passou por front-end, full stack e hoje tem um foco forte em back-end e arquitetura de APIs.',
-    'Gosto de construir software com clareza: menos complexidade acidental, boas interfaces entre componentes e decisões técnicas que façam sentido para o negócio e para o time que mantém o produto.',
-    'Também tenho interesse contínuo em inteligência artificial e segurança, especialmente quando esses temas ajudam a melhorar qualidade, produtividade e tomada de decisão em engenharia de software.',
+    'Sou graduado em Ciência da Computação e atualmente mestrando, com foco em engenharia de software, inteligência artificial, agentes inteligentes.',
+    'Minha atuação tem sido em plataformas distribuídas e sistemas de integração, com ênfase em microserviços, arquitetura orientada a eventos, comunicação assíncrona (filas e pub/sub) e desenho de APIs. Priorizo confiabilidade, escalabilidade, observabilidade e interoperabilidade entre sistemas.',
+    'Tenho experiência em desenvolvimento web do front-end ao back-end, incluindo automação de fluxos críticos, geração de documentos em larga escala e definição de padrões de arquitetura entre times.',
   ],
 };
 
@@ -42,6 +46,11 @@ export const socialLinks: SocialLink[] = [
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/in/douglaschalegre/',
     label: 'douglaschalegre',
+  },
+  {
+    name: 'X',
+    href: 'https://x.com/dougl4s_c',
+    label: '@dougl4s_c',
   },
   {
     name: 'Instagram',
