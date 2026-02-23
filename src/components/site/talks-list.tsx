@@ -16,7 +16,10 @@ export default function TalksList({ talks, repoUrl }: TalksListProps) {
   );
 
   return (
-    <section className="pt-8 pb-12 sm:pt-10 sm:pb-16" aria-labelledby="talks-title">
+    <section
+      className="pb-12 pt-8 sm:pb-16 sm:pt-10"
+      aria-labelledby="talks-title"
+    >
       <div className="site-container">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
@@ -28,20 +31,10 @@ export default function TalksList({ talks, repoUrl }: TalksListProps) {
             </h2>
             <div className="mt-3 h-px w-14 bg-orange-500" />
             <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-300 sm:text-base">
-              Workshops e talks que compartilhei com a comunidade ao longo dos últimos anos.
+              Workshops e talks que compartilhei com a comunidade ao longo dos
+              últimos anos.
             </p>
           </div>
-
-          {repoUrl ? (
-            <a
-              href={repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-orange-500 transition hover:text-orange-400"
-            >
-              Ver repositório de talks
-            </a>
-          ) : null}
         </div>
 
         <ul className="mt-8 space-y-6" role="list">

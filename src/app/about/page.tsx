@@ -79,7 +79,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <TalksList talks={talks} repoUrl={talksRepoUrl} />
+      <TalksList talks={talks} />
     </div>
   );
 }
