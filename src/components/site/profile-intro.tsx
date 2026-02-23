@@ -17,7 +17,7 @@ export default function ProfileIntro({
 }: ProfileIntroProps) {
   return (
     <section className="pt-16 pb-8 sm:pt-20 sm:pb-10">
-      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+      <div className="site-container">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
           <div className="shrink-0">
             <div className="relative h-20 w-20 overflow-hidden rounded-2xl border border-white/10 bg-white/5 sm:h-24 sm:w-24">

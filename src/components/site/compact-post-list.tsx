@@ -23,7 +23,7 @@ export default function CompactPostList({
 }: CompactPostListProps) {
   return (
     <section className="pt-0 pb-12 sm:pb-16" aria-labelledby="compact-post-list-title">
-      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+      <div className="site-container">
         <div className="mb-6">
           <h2
             id="compact-post-list-title"

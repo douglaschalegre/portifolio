@@ -8,7 +8,7 @@ interface TalksListProps {
 export default function TalksList({ talks, repoUrl }: TalksListProps) {
   return (
     <section className="pt-8 pb-12 sm:pt-10 sm:pb-16" aria-labelledby="talks-title">
-      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+      <div className="site-container">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <h2

@@ -55,6 +55,10 @@
 }
 
 @layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-4xl px-6 lg:px-8;
+  }
+
   .blog-prose {
     color: rgb(228 228 231);
   }
@@ -198,11 +202,6 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-section {
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 @media (prefers-color-scheme: dark) {

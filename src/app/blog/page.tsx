@@ -40,7 +40,7 @@ export default async function BlogPage() {
   return (
     <div className="min-h-screen bg-neutral-900 text-white">
       <section className="pt-16 pb-6 sm:pt-20 sm:pb-8">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="site-container">
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Blog
           </h1>
@@ -56,7 +56,7 @@ export default async function BlogPage() {
       </section>
 
       <section className="pt-0 pb-12 sm:pb-16">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="site-container">
           {posts.length === 0 ? (
             <div className="rounded-2xl border border-dashed border-white/20 bg-white/5 p-10 text-center">
               <h2 className="text-xl font-semibold text-white">

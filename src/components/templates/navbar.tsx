@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <header className="sticky inset-x-0 top-0 z-50 border-b border-white/5 bg-neutral-900/90 backdrop-blur">
       <nav
-        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8"
+        className="site-container flex items-center justify-between py-4"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">

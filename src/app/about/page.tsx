@@ -23,7 +23,7 @@ export default function AboutPage() {
       />
 
       <section className="pt-0 pb-4 sm:pb-6" aria-labelledby="about-text-title">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="site-container">
           <h2
             id="about-text-title"
             className="text-2xl font-semibold tracking-tight text-white sm:text-3xl"

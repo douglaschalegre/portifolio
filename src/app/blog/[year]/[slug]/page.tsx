@@ -99,7 +99,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <div className="min-h-screen bg-neutral-900 text-white">
       <section className="pt-12 pb-4 sm:pt-16 sm:pb-6">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="site-container">
           <div className="flex flex-wrap items-center gap-3 text-xs text-zinc-400">
             <span>{formatDate(post.date)}</span>
             <span aria-hidden="true" className="text-orange-500">
@@ -127,7 +127,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </section>
 
       <section className="pt-0 pb-8 sm:pb-12">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="site-container">
           {post.cover ? (
             <div className="mb-8 overflow-hidden rounded-2xl border border-white/10 bg-black/20">
               {/* eslint-disable-next-line @next/next/no-img-element */}

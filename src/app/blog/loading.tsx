@@ -2,14 +2,14 @@ export default function BlogLoading() {
   return (
     <div className="min-h-screen bg-neutral-950 text-white">
       <section className="border-b border-white/10 py-20 sm:py-28">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="site-container">
           <div className="h-4 w-16 animate-pulse rounded bg-white/10" />
           <div className="mt-4 h-12 max-w-2xl animate-pulse rounded bg-white/10" />
           <div className="mt-4 h-5 max-w-xl animate-pulse rounded bg-white/10" />
         </div>
       </section>
       <section className="py-14 sm:py-20">
-        <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:px-8">
+        <div className="site-container grid gap-6">
           {[0, 1, 2].map((item) => (
             <div
               key={item}
