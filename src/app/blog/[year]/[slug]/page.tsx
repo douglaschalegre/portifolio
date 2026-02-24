@@ -3,8 +3,10 @@ import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import remarkGfm from 'remark-gfm';
+import SharePost from '@/components/site/share-post';
 import { getAllBlogParams, getBlogPost } from '@/lib/blog/content';
 import type { BlogPost } from '@/lib/blog/types';
+import { siteUrl } from '@/lib/site/content';
 
 interface BlogPostPageProps {
   params: {
@@ -95,6 +97,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const renderedContent = stripLeadingMarkdownH1(post.content);
+  const absolutePostUrl = new URL(post.href, siteUrl).toString();
 
   return (
     <div className="min-h-screen bg-neutral-900 text-white">
@@ -147,6 +150,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {renderedContent}
             </ReactMarkdown>
           </article>
+
+          <SharePost title={post.title} url={absolutePostUrl} />
         </div>
       </section>
     </div>

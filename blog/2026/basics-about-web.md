@@ -10,7 +10,7 @@ Uma das grandes dúvidas que eu tinha quando eu tava começando a desenvolver ap
 Computadores conectados à internet são chamados de **clients** e **servers**. São dispositivos geralmente utilizados por nós: pode ser nosso celular, nosso computador desktop, tablet ou até mesmo outro servidor.
 
 Servidores são computadores que armazenam sites, aplicativos e páginas web, fornecendo o conteúdo quando algum client faz uma solicitação.
-![[Pasted image 20260223213435.png]]
+![Client](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works/simple-client-server.png)
  Isso é uma explicação simplificada do que realmente acontece. Para que tudo funcione corretamente, existem outros componentes que precisam estar presentes: conexão com a internet, TCP/IP, DNS, HTTP e o código dos websites (HTML, JavaScript e CSS). São assuntos que, por enquanto, não vale a pena aprofundar aqui, mas se você quiser se [aprofundar](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works) no tema, vale a pena estudar mais sobre isso.
 ## Client (Frontend)
 Quando falamos de um **client**, estamos falando do código que executa na máquina do usuário. Geralmente, quando estamos falando de desenvolvimento web, a aplicação que carrega esse código na nossa máquina é o navegador.
@@ -102,3 +102,8 @@ Exemplos:
 - Spring Boot
 
 Eles oferecem uma estrutura base para você construir sua aplicação com mais segurança e organização.
+
+## Conclusão
+A web é um ecossistema complexo, mas entender os conceitos básicos de como clientes e servidores se comunicam é fundamental para qualquer desenvolvedor web. O frontend é o que o usuário vê e interage, enquanto o backend é o motor que processa dados e mantém a aplicação funcionando. Frameworks são ferramentas que facilitam o desenvolvimento, oferecendo soluções prontas para problemas comuns. Com esses conceitos em mente, você estará melhor preparado para criar aplicações!
+
+É importante lembrar que isso é apenas o começo. Aplicações reais são muito mais complexas e envolvem muitos outros conceitos, como segurança, escalabilidade, performance, sistemas distribuidos, entre outros. A web está em constante evolução, e novas tecnologias e padrões estão sempre surgindo. Manter-se atualizado e continuar aprendendo é essencial para qualquer desenvolvedor.

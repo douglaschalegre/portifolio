@@ -22,6 +22,7 @@ export interface TalkItem {
 
 export const githubUsername = 'douglaschalegre';
 export const githubProfileUrl = `https://github.com/${githubUsername}`;
+export const siteUrl = 'https://douglaschalegre.com';
 
 export const profile: ProfileContent = {
   name: 'Douglas Chalegre',
