@@ -23,6 +23,73 @@ A Web 2.0, foco deste artigo, é uma versão aprimorada cujo principal objetivo 
 
  Hoje em dia, temos a [web 3.0](https://aws.amazon.com/pt/what-is/web3/), que tem como objetivo descentralizar e distribuir os dados.
 
+### Exemplo prático no Frontend: HTML puro vs framework moderno
+Imagine um formulário simples para cadastrar um usuário.
+
+Com **HTML + JavaScript puro**, você manipula o DOM manualmente:
+
+```html
+<form id="user-form">
+	<input name="name" placeholder="Nome" required />
+	<button type="submit">Cadastrar</button>
+</form>
+
+<script>
+	const form = document.getElementById("user-form");
+
+	form.addEventListener("submit", async (event) => {
+		event.preventDefault();
+		const name = form.name.value;
+
+		await fetch("/api/users", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ name })
+		});
+
+		form.reset();
+		alert("Usuário cadastrado");
+	});
+</script>
+```
+
+Com um framework como **React**, você organiza melhor estado e eventos:
+
+```jsx
+import { useState } from "react";
+
+export function UserForm() {
+	const [name, setName] = useState("");
+
+	async function handleSubmit(event) {
+		event.preventDefault();
+
+		await fetch("/api/users", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ name })
+		});
+
+		setName("");
+		alert("Usuário cadastrado");
+	}
+
+	return (
+		<form onSubmit={handleSubmit}>
+			<input
+				value={name}
+				onChange={(event) => setName(event.target.value)}
+				placeholder="Nome"
+				required
+			/>
+			<button type="submit">Cadastrar</button>
+		</form>
+	);
+}
+```
+
+Na prática, os dois resolvem o problema, mas frameworks escalam melhor quando a interface cresce e você precisa reutilizar componentes.
+
 ## Server (Backend)
 Se o client é o que roda no navegador do usuário, o server é o que roda em outro computador, geralmente na nuvem.
 
@@ -49,6 +116,60 @@ Quando você posta uma foto:
 ```
 POST /postagem
 ```
+
+### Exemplo prático de backend com endpoints REST
+Um backend pode expor endpoints para criar, listar, atualizar e remover usuários.
+
+```python
+from fastapi import FastAPI, HTTPException, Response
+from pydantic import BaseModel
+
+app = FastAPI()
+
+
+class UserInput(BaseModel):
+	name: str
+
+
+users = [{"id": 1, "name": "Douglas"}]
+
+
+@app.get("/users")
+def list_users():
+	return users
+
+
+@app.post("/users", status_code=201)
+def create_user(payload: UserInput):
+	new_user = {"id": len(users) + 1, "name": payload.name}
+	users.append(new_user)
+	return new_user
+
+
+@app.put("/users/{user_id}")
+def update_user(user_id: int, payload: UserInput):
+	for user in users:
+		if user["id"] == user_id:
+			user["name"] = payload.name
+			return {"message": "Usuário atualizado"}
+	raise HTTPException(status_code=404, detail="Usuário não encontrado")
+
+
+@app.delete("/users/{user_id}", status_code=204)
+def delete_user(user_id: int):
+	for index, user in enumerate(users):
+		if user["id"] == user_id:
+			users.pop(index)
+			return Response(status_code=204)
+	raise HTTPException(status_code=404, detail="Usuário não encontrado")
+```
+
+Esses endpoints seguem o padrão REST mais comum:
+
+- `GET /users`: lista usuários
+- `POST /users`: cria um usuário
+- `PUT /users/:id`: atualiza um usuário
+- `DELETE /users/:id`: remove um usuário
 
 ## Banco de dados
 O banco de dados é responsável por armazenar as informações de forma organizada. Usuários, senhas, comentários, pedidos, pagamentos… tudo isso vai para o banco.
