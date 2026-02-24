@@ -2,11 +2,6 @@
 title: "Código testável"
 description: "Técnicas para organizar serviços e regras de negócio em APIs backend de forma que facilite testes unitários e de integração."
 date: "2023-07-10"
-tags:
-  - backend
-  - testes
-  - arquitetura
-  - python
 ---
 
 # Código testável
