@@ -1,7 +1,7 @@
 ---
 title: "Como a Web Funciona"
 description: "Explicação simples e didática sobre como a web conecta clientes e servidores."
-date: "2023-02-23"
+date: "2026-02-23"
 cover: "https://www.none.edu.vn/images/blog/1690435110How-a-Website-Works.png"
 ---
 Uma das grandes dúvidas que eu tinha quando eu tava começando a desenvolver aplicações web era justamente como as coisas poderiam se conectar, como um site que eu criava com html e css conseguia salvar dados. Meu objetivo com esse artigo é justamente ajudar quem está passando por esse momento e esclarecer de forma simples e didática como a web funciona.
