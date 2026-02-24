@@ -2,10 +2,6 @@
 title: "Evitando o Aninhamento Excessivo"
 description: "Técnicas simples para reduzir aninhamentos exagerados e deixar o código mais legível, testável e fácil de manter."
 date: "2023-05-12"
-tags:
-  - clean-code
-  - boas-praticas
-  - python
 cover: "https://images.unsplash.com/photo-1439397629354-e2e3dea8f6f0?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwyfHxuZXN0fGVufDB8fHx8MTcwMTgxNTIwMHww&ixlib=rb-4.0.3&q=85"
 ---
 
