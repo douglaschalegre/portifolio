@@ -74,23 +74,19 @@ function ensureIsoDate(
 }
 
 function ensureTags(value: unknown, sourcePath: string): string[] {
+  if (value === undefined) {
+    return [];
+  }
+
   if (!Array.isArray(value)) {
     throw new Error(
-      `Blog post "${sourcePath}" is missing a valid "tags" array in frontmatter.`,
+      `Blog post "${sourcePath}" has an invalid "tags" value. Expected an array of strings.`,
     );
   }
 
-  const tags = value
+  return value
     .map((tag) => (typeof tag === 'string' ? tag.trim() : ''))
     .filter(Boolean);
-
-  if (tags.length === 0) {
-    throw new Error(
-      `Blog post "${sourcePath}" must include at least one tag in frontmatter.`,
-    );
-  }
-
-  return tags;
 }
 
 function ensureOptionalBoolean(

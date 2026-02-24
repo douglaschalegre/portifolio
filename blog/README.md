@@ -15,15 +15,15 @@ Exemplo:
 title: "Título do artigo"
 description: "Resumo curto para listagem e SEO"
 date: "2026-02-23"
-tags:
-  - backend
-  - arquitetura
 ---
 ```
 
 ## Frontmatter opcional
 
 ```yaml
+tags:
+  - backend
+  - arquitetura
 cover: "/blog/capas/arquitetura-limpa.jpg"
 draft: false
 updatedAt: "2026-02-24"
@@ -33,7 +33,6 @@ updatedAt: "2026-02-24"
 
 - O nome da pasta (`<ano>`) deve ter 4 dígitos e bater com o ano do campo `date`
 - `date` e `updatedAt` devem estar no formato `YYYY-MM-DD`
-- `tags` deve ser uma lista com pelo menos 1 item
 - O `slug` é derivado do nome do arquivo (sem `.md`)
 - `draft: true` remove o artigo de listagens/sitemap em produção
 
@@ -54,4 +53,4 @@ updatedAt: "2026-02-24"
 - `npm run build`
 - Verificar `/blog`
 - Verificar `/blog/<ano>/<slug>`
-- Confirmar título, descrição, data e tags
+- Confirmar título, descrição e data
